@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     if( rank == 0 ){
         int num;
-        printf("Enter a number: ");
+        printf("Enter a number\n");
         scanf("%d", &num);
 
         MPI_Send(&num, 4, MPI_INT, 1, 1, MPI_COMM_WORLD);
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
         }
 
         if(prime){
-            printf("Rank 2: Number is prime");
+            printf("Rank 2: Number is prime\n");
         }
         else{
             printf("Rank 2: Number is not prime\n");
